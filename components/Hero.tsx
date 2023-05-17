@@ -1,13 +1,14 @@
 'use client'
 
 import { useRouter } from "next/navigation"
+import { FormEvent } from "react"
 
 function Hero () {
 
     const router = useRouter()
 
 
-    const handleClick = e => {
+    const handleClick = (e: FormEvent) => {
         e.preventDefault()
         router.push('https://t.me/fenekcoin')
     }
