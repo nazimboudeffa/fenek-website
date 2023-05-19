@@ -2,6 +2,8 @@
 
 import { useRouter } from "next/navigation"
 import { FormEvent } from "react"
+import Image from 'next/image';
+import telegramIcon from '@/public/telegram-svgrepo-com.svg'
 
 function Hero () {
 
@@ -20,7 +22,13 @@ function Hero () {
             <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">$FENEK</h1>
             <p className="mb-5">The Algerian BEP-20 Token</p>
-            <button className="btn btn-primary" onClick={handleClick}>Join Telegram</button>
+            <Image
+            priority
+            src={telegramIcon}
+            alt="Join our Telegram"
+            onClick={handleClick}
+            className="mx-auto cursor-pointer"
+            />
             </div>
         </div>
         </div>
